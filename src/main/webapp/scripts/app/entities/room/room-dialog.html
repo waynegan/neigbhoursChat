@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myRoomLabel" translate="easelfApp.room.home.createOrEditLabel">Create or edit a Room</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="room.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="easelfApp.room.roomId" for="field_roomId">RoomId</label>
+            <input type="number" class="form-control" name="roomId" id="field_roomId"
+                    ng-model="room.roomId"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="easelfApp.room.roomName" for="field_roomName">RoomName</label>
+            <input type="text" class="form-control" name="roomName" id="field_roomName"
+                    ng-model="room.roomName"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="easelfApp.room.isPravate" for="field_isPravate">IsPravate</label>
+            <input type="checkbox" class="form-control" name="isPravate" id="field_isPravate"
+                    ng-model="room.isPravate"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="easelfApp.room.password" for="field_password">Password</label>
+            <input type="text" class="form-control" name="password" id="field_password"
+                    ng-model="room.password"
+                    >
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

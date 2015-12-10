@@ -1,0 +1,28 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "roomId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "roomName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "isPravate",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "password",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151210074146",
+    "dto": "no",
+    "pagination": "no"
+}
